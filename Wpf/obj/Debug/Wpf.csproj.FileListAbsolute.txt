@@ -1,0 +1,175 @@
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Wpf.exe.config
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Wpf.exe
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Wpf.pdb
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Azure.Core.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Azure.Identity.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Data.SqlClient.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Logging.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Buffers.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Configuration.ConfigurationManager.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Memory.Data.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Memory.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Numerics.Vectors.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.AccessControl.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.Permissions.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.Principal.Windows.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Text.Encodings.Web.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Text.Json.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.ValueTuple.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Azure.Core.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Azure.Identity.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Data.SqlClient.pdb
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Data.SqlClient.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Logging.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Buffers.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Configuration.ConfigurationManager.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Memory.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Memory.Data.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Numerics.Vectors.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.AccessControl.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.Permissions.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Security.Principal.Windows.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Text.Encodings.Web.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Text.Json.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\System.ValueTuple.xml
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.csproj.AssemblyReference.cache
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.csproj.SuggestedBindingRedirects.cache
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.exe.config
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\MainWindow.g.cs
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\App.g.cs
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf_MarkupCompile.cache
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf_MarkupCompile.lref
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\MainWindow.baml
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.g.resources
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.Properties.Resources.resources
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.csproj.GenerateResource.cache
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.csproj.CoreCompileInputs.cache
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.csproj.CopyComplete
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.exe
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Wpf.pdb
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Registration.g.cs
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Registration.baml
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Wpf.exe.config
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Wpf.exe
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Wpf.pdb
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Azure.Core.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Azure.Identity.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Buffers.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Memory.Data.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Memory.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.Permissions.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Text.Json.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.ValueTuple.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Azure.Core.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Azure.Identity.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Buffers.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Memory.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Memory.Data.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.Permissions.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Text.Json.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\System.ValueTuple.xml
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.AssemblyReference.cache
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.SuggestedBindingRedirects.cache
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.exe.config
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\MainWindow.g.cs
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Registration.g.cs
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\App.g.cs
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf_MarkupCompile.cache
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf_MarkupCompile.lref
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\MainWindow.baml
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Registration.baml
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.g.resources
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.Properties.Resources.resources
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.GenerateResource.cache
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.CoreCompileInputs.cache
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.CopyComplete
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.exe
+C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.pdb
