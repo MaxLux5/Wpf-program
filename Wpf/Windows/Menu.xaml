@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Window/Menu.jpg"/>
+            <ImageBrush ImageSource="/Windows/Menu.jpg"/>
         </Grid.Background>
         <Button Content="Назад" HorizontalAlignment="Left" Height="30" Margin="20,365,0,0" VerticalAlignment="Top" Width="90" Click="Button_Back" Grid.RowSpan="1"/>
         <Button Content="Спорт__клуб" HorizontalAlignment="Left" Height="35" Margin="90,60,0,0" VerticalAlignment="Top" Width="150" Click="Button_Sport_club"/>

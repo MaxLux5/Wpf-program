@@ -4,21 +4,37 @@ using System.Windows.Controls;
 
 namespace Wpf
 {
+    enum RegistrationResults
+    {
+        LoginOrPasswordLessThanFive,
+        IncorrectLoginOrPasswordOrMail,
+        PasswordOrPasswordСonfirmationNotEqual,
+        IncorrectMail,
+        UserAlreadyExists,
+        RegistrationSuccessful
+    }
     internal class DataBase
     {
+        #region Variables
+        private int minLoginSize = 5;
+        private int minPasswordSize = 5;
+
+        private bool isAuthorized = true;
+        #endregion
+
         SqlConnection connection = new SqlConnection(
             "Server=HOME-PC\\SQLEXPRESS; DataBase=MyDB; Integrated Security=True");
 
         public void OpenConnection()
         {
-            if(connection.State == System.Data.ConnectionState.Closed)
+            if(connection.State == ConnectionState.Closed)
             {
                 connection.Open();
             }
         }
         public void CloseConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (connection.State == ConnectionState.Open)
             {
                 connection.Close();
             }
@@ -34,27 +50,21 @@ namespace Wpf
                 $" where login_user = '{login}' and password_user = '{password}'";
 
             OpenConnection();
-
             SqlCommand cmd = new SqlCommand(queryString, GetConnection());
 
             var responseFromDB = cmd.ExecuteScalar();
             CloseConnection();
-            if (responseFromDB != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (responseFromDB != null) return isAuthorized;
+            else return !isAuthorized;
         }
-        public string RegisterNewUser(string login, string password, string passwordСonfirmation, string mail)
+        public RegistrationResults RegisterNewUser(string login, string password, string passwordСonfirmation, string mail)
         {
-            if (login.Length < 5 || password.Length < 5) return "Пароль или Логин меньше 5 символов недопустим!";
-            if (password != passwordСonfirmation) return "Пароли не совпадают!";
-            if (!(mail.Contains("@gmail.com") || mail.Contains("@yandex.ru") || mail.Contains("@mail.ru"))) return "Вы ввели неверную почту!";
+            if (login.Length < minLoginSize || password.Length < minPasswordSize) return RegistrationResults.LoginOrPasswordLessThanFive;
+            if (login == "Логин" || password == "Пароль" || mail.Contains("Почта")) return RegistrationResults.IncorrectLoginOrPasswordOrMail;
+            if (password != passwordСonfirmation) return RegistrationResults.PasswordOrPasswordСonfirmationNotEqual;
+            if (!(mail.Contains("@gmail.com") || mail.Contains("@yandex.ru") || mail.Contains("@mail.ru"))) return RegistrationResults.IncorrectMail;
 
-            if (CheckAuthorization(login, password)) return "Такой пользователь уже существует!";
+            if (CheckAuthorization(login, password)) return RegistrationResults.UserAlreadyExists;
 
 
             string queryString = "insert into Register(login_user, password_user, mail_user)" +
@@ -64,9 +74,8 @@ namespace Wpf
             command.ExecuteNonQuery();
             CloseConnection();
 
-            return "Регистрация прошла успешно!";
+            return RegistrationResults.RegistrationSuccessful;
         }
-
         public void DisplayTable(DataGrid dataGrid, string table)
         {
             OpenConnection();

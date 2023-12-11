@@ -17,20 +17,25 @@ namespace Wpf
     /// <summary>
     /// Логика взаимодействия для Dogovor.xaml
     /// </summary>
-    public partial class Dogovor : Window
+    public partial class Table : Window
     {
+        #region Variables
         private DataBase dataBase = new DataBase();
         private Menu MenuWindow;
 
+        private string nameOfTable;
+        #endregion
 
-        public Dogovor()
+        public Table(string nameOfTable)
         {
             InitializeComponent();
+            this.nameOfTable = nameOfTable;
         }
 
         private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            dataBase.DisplayTable(TableGrid, table: "Dogovor");
+            dataBase.DisplayTable(TableGrid, nameOfTable);
+            Title = nameOfTable;
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)

@@ -31,11 +31,11 @@ namespace Wpf
             {
                 case loginTextBoxName:
                     if (textBox.Text == loginText) textBox.Text = string.Empty;
-                    else textBox.Text = loginText;
+                    else if(textBox.Text == string.Empty) textBox.Text = loginText;
                     break;
                 case passwordTextBoxName:
                     if (textBox.Text == passwordText) textBox.Text = string.Empty;
-                    else textBox.Text = passwordText;
+                    else if (textBox.Text == string.Empty) textBox.Text = passwordText;
                     break;
                 default:
                     throw new Exception("Шляпу ты написал, чудила!");
@@ -52,12 +52,8 @@ namespace Wpf
                 menuWindow.Show();
                 Close();
             }
-            else
-            {
-                MessageBox.Show("Вы ввели неверные данные!");
-            }
+            else MessageBox.Show("Вы ввели неверные данные!");
         }
-
         private void Button_Registration(object sender, RoutedEventArgs e)
         {
             registrationWindow = new Registration();

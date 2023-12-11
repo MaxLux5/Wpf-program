@@ -168,21 +168,11 @@ C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.CoreCompileInputs.cac
 C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.csproj.CopyComplete
 C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.exe
 C:\Users\Максим\Desktop\Wpf\Wpf\obj\Debug\Wpf.pdb
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Dogovor.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Menu.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Registration.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Sportsmen.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Sport_club.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Trener.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Trenirovka.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Vid_sporta.g.cs
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Dogovor.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Menu.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Registration.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Sportsmen.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Sport_club.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Trener.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Trenirovka.baml
-G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Window\Vid_sporta.baml
 G:\Programming\My Projects\Wpf\Wpf\obj\Debug\MainWindow.g.cs
 G:\Programming\My Projects\Wpf\Wpf\obj\Debug\MainWindow.baml
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Windows\Tables.g.cs
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Windows\Menu.g.cs
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Windows\Registration.g.cs
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Windows\Tables.baml
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Windows\Menu.baml
+G:\Programming\My Projects\Wpf\Wpf\obj\Debug\Windows\Registration.baml
