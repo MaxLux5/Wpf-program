@@ -191,9 +191,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Registration.xaml.cs">
+    <Compile Include="Controller.cs" />
+    <Compile Include="Window\Dogovor.xaml.cs">
+      <DependentUpon>Dogovor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Window\Sportsmen.xaml.cs">
+      <DependentUpon>Sportsmen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Sport_club.xaml.cs">
+      <DependentUpon>Sport_club.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Trener.xaml.cs">
+      <DependentUpon>Trener.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Trenirovka.xaml.cs">
+      <DependentUpon>Trenirovka.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Vid_sporta.xaml.cs">
+      <DependentUpon>Vid_sporta.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Window\Dogovor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -207,7 +233,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Registration.xaml">
+    <Page Include="Window\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window\Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window\Sportsmen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window\Sport_club.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window\Trener.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window\Trenirovka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window\Vid_sporta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -240,22 +290,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\authorization.jpg" />
+    <SplashScreen Include="Pictures\Red-car.png" />
   </ItemGroup>
   <ItemGroup>
-    <SplashScreen Include="Pictures\Red-car.png" />
+    <Resource Include="Pictures\Authorization.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Registration.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pictures\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Authorization.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Registration.png" />
+    <Resource Include="Window\Registration.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\logo.png" />
+    <Resource Include="Window\Menu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
