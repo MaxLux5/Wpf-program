@@ -10,46 +10,11 @@ namespace Wpf
         #region Variables
         private DataBase dataBase = new DataBase();
         private MainWindow mainWindow;
-
-        private string loginText = "Логин";
-        private string passwordText = "Пароль";
-        private string passwordConfirmationText = "Подтверждение пароля";
-        private string mailText = "Почта";
-
-        private const string loginTextBoxName = "LoginTextBox";
-        private const string passwordTextBoxName = "PasswordTextBox";
-        private const string passwordConfirmationTextBoxName = "PasswordСonfirmationTextBox";
-        private const string mailTextBoxName = "MailTextBox";
         #endregion
 
         public Registration()
         {
             InitializeComponent();
-        }
-        private void ChangeTextBox(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            switch (textBox.Name)
-            {
-                case loginTextBoxName:
-                    if (textBox.Text == loginText) textBox.Text = string.Empty;
-                    else if(textBox.Text == string.Empty) textBox.Text = loginText;
-                    break;
-                case passwordTextBoxName:
-                    if (textBox.Text == passwordText) textBox.Text = string.Empty;
-                    else if(textBox.Text == string.Empty) textBox.Text = passwordText;
-                    break;
-                case passwordConfirmationTextBoxName:
-                    if (textBox.Text == passwordConfirmationText) textBox.Text = string.Empty;
-                    else if(textBox.Text == string.Empty) textBox.Text = passwordConfirmationText;
-                    break;
-                case mailTextBoxName:
-                    if (textBox.Text == mailText) textBox.Text = string.Empty;
-                    else if(textBox.Text == string.Empty) textBox.Text = mailText;
-                    break;
-                default:
-                    throw new Exception("Очередная шляпа написана тобой!");
-            }
         }
 
         private void Button_Registration(object sender, RoutedEventArgs e)

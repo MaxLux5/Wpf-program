@@ -1,41 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Wpf
 {
-    /// <summary>
-    /// Логика взаимодействия для Dogovor.xaml
-    /// </summary>
     public partial class Table : Window
     {
         #region Variables
         private DataBase dataBase = new DataBase();
         private Menu MenuWindow;
-
-        private string nameOfTable;
         #endregion
 
-        public Table(string nameOfTable)
+        public Table(string title)
         {
             InitializeComponent();
-            this.nameOfTable = nameOfTable;
+            Title = title;
         }
 
-        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+        public DataGrid ReturnDataGrid() => TableGrid;
+        private void DeleteDataFromTable()
         {
-            dataBase.DisplayTable(TableGrid, nameOfTable);
-            Title = nameOfTable;
+            var itemSource = TableGrid.ItemsSource as DataView;
+            try
+            {
+                itemSource.Delete(TableGrid.SelectedIndex);
+            }
+            catch
+            {
+                MessageBox.Show("Выберите строку для удаления!");
+            }
+            TableGrid.ItemsSource = itemSource;
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)
@@ -43,6 +37,15 @@ namespace Wpf
             MenuWindow = new Menu();
             MenuWindow.Show();
             Close();
+        }
+        private void Button_Delete(object sender, RoutedEventArgs e)
+        {
+            dataBase.DeleteDataFromDB(Title, TableGrid.SelectedItem);
+            DeleteDataFromTable();
+        }
+        private void Button_Insert(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

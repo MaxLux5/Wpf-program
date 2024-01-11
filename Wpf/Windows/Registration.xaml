@@ -10,14 +10,15 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Windows/Registration.png"/>
+            <ImageBrush ImageSource="/Pictures/Registration.png"/>
         </Grid.Background>
         <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="35" Margin="0,310,0,0" VerticalAlignment="Top" Width="150" Click="Button_Registration"/>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Height="25" Margin="0,60,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="220" GotFocus="ChangeTextBox" LostFocus="ChangeTextBox"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Height="25" Margin="0,120,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="220" GotFocus="ChangeTextBox" LostFocus="ChangeTextBox"/>
-        <TextBox x:Name="PasswordСonfirmationTextBox" HorizontalAlignment="Center" Height="25" Margin="0,180,0,0" TextWrapping="Wrap" Text="Подтверждение пароля" VerticalAlignment="Top" Width="220" GotFocus="ChangeTextBox" LostFocus="ChangeTextBox"/>
-        <TextBox x:Name="MailTextBox" HorizontalAlignment="Center" Height="25" Margin="0,240,0,0" TextWrapping="Wrap" Text="Почта" VerticalAlignment="Top" Width="220" GotFocus="ChangeTextBox" LostFocus="ChangeTextBox"/>
         <Button Content="Назад" HorizontalAlignment="Left" Height="30" Margin="20,20,0,0" VerticalAlignment="Top" Width="70" Click="Button_Back"/>
+
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Height="25" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Height="25" Margin="0,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="PasswordСonfirmationTextBox" HorizontalAlignment="Center" Height="25" Margin="0,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="MailTextBox" HorizontalAlignment="Center" Height="25" Margin="0,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
 
     </Grid>
 </Window>

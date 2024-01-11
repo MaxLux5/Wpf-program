@@ -4,6 +4,50 @@
              xmlns:local="clr-namespace:Wpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <Style x:Key="LoginWatermark"  TargetType="{x:Type TextBlock}">
+                <Setter Property="Visibility" Value="Collapsed"/>
+                <Setter Property="Foreground" Value="DarkGray"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ElementName=LoginTextBox, Path=Text}" Value="">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="PasswordWatermark"  TargetType="{x:Type TextBlock}">
+                <Setter Property="Visibility" Value="Collapsed"/>
+                <Setter Property="Foreground" Value="DarkGray"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ElementName=PasswordTextBox, Path=Text}" Value="">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="Watermark"  TargetType="{x:Type TextBox}">
+                <Setter Property="KeyboardNavigation.TabNavigation" Value="Continue"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Border Background="White" BorderBrush="DarkGray" BorderThickness="1">
+                                <Grid>
+                                    <ScrollViewer x:Name="PART_ContentHost"/>
+                                    <Label x:Name="LabelInTextBox" Visibility="Collapsed" Foreground="DarkGray"
+                                           Content="{TemplateBinding Tag}" VerticalContentAlignment="Center" Padding="{TemplateBinding Padding}"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="Text" Value=""/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Visibility" TargetName="LabelInTextBox" Value="Visible"/>
+                                </MultiTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

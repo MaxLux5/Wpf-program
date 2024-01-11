@@ -10,12 +10,17 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Authorization.jpg"/>
+            <ImageBrush ImageSource="/Pictures/Authorization.jpg"/>
         </Grid.Background>
         <Button Content="Войти" HorizontalAlignment="Center" Height="35" Margin="0,250,0,0" VerticalAlignment="Top" Width="150" Click="Button_Authorization"/>
         <Button Content="Регистрация" HorizontalAlignment="Center" Height="35" Margin="0,300,0,0" VerticalAlignment="Top" Width="150" Click="Button_Registration"/>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Height="25" Margin="0,120,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="220" GotFocus="ChangeTextBox" LostFocus="ChangeTextBox"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Height="25" Margin="0,180,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="220" GotFocus="ChangeTextBox" LostFocus="ChangeTextBox"/>
-        
+        <TextBox x:Name="LoginTextBox" Text="" HorizontalAlignment="Center" Height="25" Margin="0,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBlock Text="Введите логин" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,125,0,0" Style="{StaticResource ResourceKey=LoginWatermark}"/>
+
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Height="25" Margin="0,180,0,0" VerticalAlignment="Top" Width="220" TextWrapping="Wrap" LostFocus="PasswordTextBox_LostFocus"/>
+        <PasswordBox x:Name="PasswordBoxML" HorizontalAlignment="Center" Height="25" Margin="0,180,0,0" VerticalAlignment="Top" Width="220" Password="" LostFocus="PasswordBoxML_LostFocus"/>
+        <CheckBox Content="Показать пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CheckBox_Click" Margin="397,217,0,0"/>
+        <TextBlock Text="Введите пароль" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,185,0,0" Style="{StaticResource ResourceKey=PasswordWatermark}"/>
+
     </Grid>
 </Window>
