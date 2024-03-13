@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("visible-photoroom.png-photoroom.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("windows/tables.jpg")]
 
 

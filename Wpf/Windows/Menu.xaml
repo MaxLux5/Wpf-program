@@ -14,7 +14,7 @@
         </Grid.Background>
         <Button Content="Назад" HorizontalAlignment="Left" Height="30" Margin="20,365,0,0" VerticalAlignment="Top" Width="90" Click="Button_Back" Grid.RowSpan="1"/>
         <ComboBox x:Name="ComboBox" MaxDropDownHeight="200" HorizontalAlignment="Center" Height="30" Margin="0,10,0,0" VerticalAlignment="Top" Width="250"/>
-        <Button Content="Вывести" HorizontalAlignment="Right" Margin="0,365,20,0" VerticalAlignment="Top" Height="30" Width="90" Click="Button_Click"/>
+        <Button Content="Вывести" HorizontalAlignment="Right" Margin="0,365,20,0" VerticalAlignment="Top" Height="30" Width="90" Click="Button_Display"/>
 
     </Grid>
 </Window>

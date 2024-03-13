@@ -25,9 +25,6 @@ namespace Wpf
                 case RegistrationResults.LoginOrPasswordLessThanFive:
                     MessageBox.Show("Логин или Пароль меньше 5 символов!");
                     break;
-                case RegistrationResults.IncorrectLoginOrPasswordOrMail:
-                    MessageBox.Show("Некорректные Данные");
-                    break;
                 case RegistrationResults.PasswordOrPasswordСonfirmationNotEqual:
                     MessageBox.Show("Пароли не совпадают!");
                     break;

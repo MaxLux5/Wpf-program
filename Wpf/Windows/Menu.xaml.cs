@@ -15,7 +15,7 @@ namespace Wpf
         public Menu()
         {
             InitializeComponent();
-            ComboBox.ItemsSource = dataBase.ReturnTableWithTablesNamesFromDB();
+            ComboBox.ItemsSource = dataBase.ReturnArrayOfTableNamesFromDB();
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)
@@ -25,7 +25,7 @@ namespace Wpf
             Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Display(object sender, RoutedEventArgs e)
         {
             if (ComboBox.SelectedItem is null)
             {
@@ -34,7 +34,9 @@ namespace Wpf
             }
 
             tableWindow = new Table(ComboBox.SelectedItem.ToString());
-            dataBase.DisplayTable(tableWindow.ReturnDataGrid(), ComboBox.SelectedItem.ToString());
+            DataTable dataTable = dataBase.ReturnTableFromDB(ComboBox.SelectedItem.ToString());
+            var dataGrid = tableWindow.ReturnDataGrid();
+            dataGrid.ItemsSource = dataTable.DefaultView;
             tableWindow.Show();
             Close();
         }

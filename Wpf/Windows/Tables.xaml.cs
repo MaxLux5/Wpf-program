@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -40,12 +42,61 @@ namespace Wpf
         }
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
-            dataBase.DeleteDataFromDB(Title, TableGrid.SelectedItem);
-            DeleteDataFromTable();
+            bool answer = MessageBox.Show("Удалить эту строку?", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+            if (answer)
+            {
+                dataBase.DeleteDataFromDB(Title, TableGrid.SelectedItem, TableGrid.ItemsSource);
+                DeleteDataFromTable();
+            }
         }
         private void Button_Insert(object sender, RoutedEventArgs e)
         {
-            
+            bool answer = MessageBox.Show("Добавить эту строку?", "Добавление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+            if (answer)
+            {
+                try
+                {
+                    dataBase.InsertDataIntoDB(Title, TableGrid.SelectedItem, TableGrid.ItemsSource);
+                    MessageBox.Show("Данные добавлены!");
+                }
+                catch (MySqlException)
+                {
+                    MessageBox.Show("Эта строка уже была добавлена!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void DisplayTableFromDB()
+        {
+            DataTable table = dataBase.ReturnTableFromDB(Title);
+            TableGrid.ItemsSource = table.DefaultView;
+        }
+        private void Button_Update(object sender, RoutedEventArgs e)
+        {
+            DisplayTableFromDB();
+        }
+        private void Button_Change(object sender, RoutedEventArgs e)
+        {
+            bool answer = MessageBox.Show("Изменить эту строку?", "Изменение", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+            if (answer)
+            {
+                dataBase.ChangeDataInTableRowFromDB(Title, TableGrid.SelectedItem, TableGrid.ItemsSource);
+            }
+        }
+        private void Button_Search(object sender, RoutedEventArgs e)
+        {
+            if(SearchTextBox.Text != string.Empty)
+            {
+                var newTable = dataBase.SearchRowsFromDB(Title, SearchTextBox.Text);
+                TableGrid.ItemsSource = newTable.DefaultView;
+            }
+            else
+            {
+                DisplayTableFromDB();
+            }
         }
     }
 }

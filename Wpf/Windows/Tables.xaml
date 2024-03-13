@@ -12,15 +12,14 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pictures/Tables.jpg"/>
         </Grid.Background>
-        <DataGrid x:Name="TableGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="40,90,140,39" AutoGenerateColumns="True"/>
-        <Button Content="Назад" HorizontalAlignment="Right" Height="30" Margin="0,365,25,0" VerticalAlignment="Top" Width="90" Click="Button_Back"/>
-        <Button Content="Обновить" HorizontalAlignment="Right" Height="30" Margin="0,40,25,0" VerticalAlignment="Top" Width="90"/>
-        <Button Content="Добавить" HorizontalAlignment="Right" Height="30" Margin="0,90,25,0" VerticalAlignment="Top" Width="90" Click="Button_Insert"/>
-        <Button Content="Изменить" HorizontalAlignment="Right" Height="30" Margin="0,140,25,0" VerticalAlignment="Top" Width="90"/>
-        <Button Content="Удалить" HorizontalAlignment="Right" Height="30" Margin="0,190,25,0" VerticalAlignment="Top" Width="90" Click="Button_Delete"/>
-        
-        <TextBox HorizontalAlignment="Right" Height="30" Margin="0,40,140,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Width="500"/>
-        <Button Content="Найти" HorizontalAlignment="Right" Height="30" Margin="0,40,670,0" VerticalAlignment="Top" Width="90"/>
+        <DataGrid x:Name="TableGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="25,90,131,40" AutoGenerateColumns="True"/>
+        <Button Content="Назад" HorizontalAlignment="Right" Height="30" Margin="0,365,20,0" VerticalAlignment="Top" Width="90" Click="Button_Back"/>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="30" Margin="144,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="525" Style="{StaticResource ResourceKey=Watermark}" Tag="Поиск"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Height="30" Margin="25,40,0,0" VerticalAlignment="Top" Width="90" Click="Button_Search"/>
+        <Button Content="Обновить" HorizontalAlignment="Left" Margin="690,40,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="Button_Update"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="690,90,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="Button_Insert"/>
+        <Button Content="Изменить" HorizontalAlignment="Left" Margin="690,140,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="Button_Change"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="690,190,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="Button_Delete"/>
 
     </Grid>
 </Window>

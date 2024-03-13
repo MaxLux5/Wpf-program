@@ -4,13 +4,15 @@ using System.Windows.Controls;
 using System.Windows;
 using System.IO;
 using System;
+using MySql.Data.MySqlClient;
+using System.Linq;
+using System.Data.Common;
 
 namespace Wpf
 {
     enum RegistrationResults
     {
         LoginOrPasswordLessThanFive,
-        IncorrectLoginOrPasswordOrMail,
         PasswordOrPasswordСonfirmationNotEqual,
         IncorrectMail,
         UserAlreadyExists,
@@ -25,8 +27,8 @@ namespace Wpf
         private bool isAuthorized = true;
         #endregion
 
-        SqlConnection connection = new SqlConnection(
-            "Server=HOME-PC\\SQLEXPRESS; DataBase=MyDB; Integrated Security=True");
+        MySqlConnection connection = new MySqlConnection(
+            "Server=localhost; DataBase=MyDB; password=24681357; username=root");
 
         public void OpenConnection()
         {
@@ -38,7 +40,7 @@ namespace Wpf
             if (connection.State == ConnectionState.Open)
                 connection.Close();
         }
-        public SqlConnection GetConnection()
+        public MySqlConnection GetConnection()
         {
             return connection;
         }
@@ -49,7 +51,7 @@ namespace Wpf
                 $" where login_user = '{login}' and password_user = '{password}'";
 
             OpenConnection();
-            SqlCommand cmd = new SqlCommand(queryString, GetConnection());
+            MySqlCommand cmd = new MySqlCommand(queryString, GetConnection());
 
             var responseFromDB = cmd.ExecuteScalar();
             CloseConnection();
@@ -59,7 +61,6 @@ namespace Wpf
         public RegistrationResults RegisterNewUser(string login, string password, string passwordСonfirmation, string mail)
         {
             if (login.Length < minLoginSize || password.Length < minPasswordSize) return RegistrationResults.LoginOrPasswordLessThanFive;
-            if (login == "Логин" || password == "Пароль" || mail.Contains("Почта")) return RegistrationResults.IncorrectLoginOrPasswordOrMail;
             if (password != passwordСonfirmation) return RegistrationResults.PasswordOrPasswordСonfirmationNotEqual;
             if (!(mail.Contains("@gmail.com") || mail.Contains("@yandex.ru") || mail.Contains("@mail.ru"))) return RegistrationResults.IncorrectMail;
 
@@ -69,64 +70,151 @@ namespace Wpf
             string queryString = "insert into Register(login_user, password_user, mail_user)" +
                 $" values ('{login}', '{password}', '{mail}')";
             OpenConnection();
-            var command = new SqlCommand(queryString, GetConnection());
+            var command = new MySqlCommand(queryString, GetConnection());
             command.ExecuteNonQuery();
             CloseConnection();
 
             return RegistrationResults.RegistrationSuccessful;
         }
-        public void DisplayTable(DataGrid dataGrid, string table)
+        public DataTable ReturnTableFromDB(string tableName, string conditionForQuery = "")
         {
             OpenConnection();
-            string queryString = $"select * from {table}";
-            SqlCommand command = new SqlCommand(queryString, GetConnection());
+            string queryString = $"select * from {tableName} {conditionForQuery}";
+            var command = new MySqlCommand(queryString, GetConnection());
             command.ExecuteNonQuery();
 
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable(table);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable dataTable = new DataTable(tableName);
 
             adapter.Fill(dataTable);
-            dataGrid.ItemsSource = dataTable.DefaultView;
             CloseConnection();
+            return dataTable;
         }
-        public string[] ReturnTableWithTablesNamesFromDB()
+        public string[] ReturnArrayOfTableNamesFromDB()
         {
             OpenConnection();
-            string queryString = $"select name from sys.tables";
-            SqlCommand cmd = new SqlCommand(queryString, GetConnection());
+            string queryString = $"show tables";
+            var cmd = new MySqlCommand(queryString, GetConnection());
 
-            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
             DataTable dataTable = new DataTable("Tables");
 
-            dataAdapter.SelectCommand = cmd;
             dataAdapter.Fill(dataTable);
 
-            int counter = dataTable.Select().Length;
-            string[] ArrayWithString = new string[counter - 1];
-            for (int i = counter - 2, j = counter - 1; i >= 0; i--, j--)
+            int counter = dataTable.Rows.Count;
+            string[] ArrayOfStrings = new string[counter];
+            for (int i = 0; i < counter; i++)
             {
-                if (dataTable.Rows[j][0]?.ToString() == "sysdiagrams") j--;
-                ArrayWithString[i] = dataTable.Rows[j].ItemArray[0]?.ToString();
+                ArrayOfStrings[i] = dataTable.Rows[i].ItemArray[0]?.ToString();
             }
             CloseConnection();
-            return ArrayWithString;
+            return ArrayOfStrings;
         }
-        public void DeleteDataFromDB(string nameOfTable, object selectedRow)
+        public void DeleteDataFromDB(string nameOfTable, object selectedRow, object dataGridTable)
         {
+            var dataView = dataGridTable as DataView;
+            var columnName = dataView.Table.Columns[0];
             if (selectedRow is DataRowView row)
             {
-                if (row.Row.ItemArray[0].ToString() == string.Empty) return;
-
+                var dataName = row.Row.ItemArray[0];
+                if (dataName?.ToString() == string.Empty) return;
                 OpenConnection();
-                string queryString = $"delete from {nameOfTable} where id = {row.Row.ItemArray[0]}";
-                SqlCommand cmd = new SqlCommand(queryString, connection);
+                string queryString = $"delete from {nameOfTable} where {columnName} = '{dataName}'";
+                var cmd = new MySqlCommand(queryString, connection);
                 cmd.ExecuteNonQuery();
                 CloseConnection();
             }
         }
-        public void InsertDataToTable()
+        public void InsertDataIntoDB(string nameOfTable, object selectedRow, object dataGridTable)
         {
-            
+            var dataView = dataGridTable as DataView;
+            var columns = dataView.Table.Columns;
+            var rowView = selectedRow as DataRowView;
+            if (rowView == null) throw new Exception("Выберите строку для сохранения в базе данных!");
+            var row = rowView.Row;
+
+            int columnsCount = columns.Count;
+            string queryString = $"insert into {nameOfTable}(";
+            for (int i = 0; i < columnsCount; i++)
+            {
+                if (columns[i].ToString() == "id") continue;
+                if(i == columnsCount - 1)
+                {
+                    queryString += $"{columns[i]})";
+                    break;
+                }
+                queryString += $"{columns[i]}, ";
+            }
+            queryString += " values (";
+            for (int i = 0; i < columnsCount; i++)
+            {
+                if (i == columnsCount - 1)
+                {
+                    queryString += $"'{row[i]}')";
+                    break;
+                }
+                if (columns[i].ToString() == "id" && row[i].ToString() == string.Empty) continue;
+                if (row[i].ToString() == string.Empty) throw new Exception("Обнаружена пустая ячейка в добавляемой строке!");
+
+                queryString += $"'{row[i]}', ";
+            }
+            OpenConnection();
+            var cmd = new MySqlCommand(queryString, connection);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        public void ChangeDataInTableRowFromDB(string nameOfTable, object selectedRow, object dataGridTable)
+        {
+            var rowView = selectedRow as DataRowView;
+            var row = rowView?.Row;
+            if(row == null) return;
+            string conditionForQuery = $"where id = {row[0]}";
+            DataTable currentTable = ReturnTableFromDB(nameOfTable, conditionForQuery);
+            var currentRows = currentTable.Rows;
+            var currentColumns = currentTable.Columns;
+
+            int columnsCount = currentColumns.Count;
+            var queryString = $"update {nameOfTable} set";
+            for (int i = 0; i < columnsCount; i++)
+            {
+                if (currentColumns[i].ToString() == "id") continue;
+                if (i == columnsCount - 1)
+                {
+                    queryString += $" {currentColumns[i]} = '{row[i]}' where id = '{Convert.ToInt32(row[0])}'";
+                    break;
+                }
+                queryString += $" {currentColumns[i]} = {row[i]},";
+            }
+
+            OpenConnection();
+            var cmd = new MySqlCommand(queryString, connection);
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+        }
+        public DataTable SearchRowsFromDB(string nameOfTable, string textWhichLookingFor)
+        {
+            DataTable currentTable = ReturnTableFromDB(nameOfTable);
+            var columns = currentTable.Columns;
+            var rows = currentTable.Rows;
+            var newTable = new DataTable(nameOfTable);
+
+            foreach (var item in columns)
+            {
+                newTable.Columns.Add(item.ToString());
+            }
+            for (int i = 0; i < rows.Count; i++)
+            {
+                object[] array = rows[i].ItemArray;
+                foreach (var item in rows[i].ItemArray)
+                {
+                    if (item.ToString().IndexOf(textWhichLookingFor, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        newTable.Rows.Add(array);
+                    }
+                }
+            }
+
+            return newTable;
         }
     }
 }

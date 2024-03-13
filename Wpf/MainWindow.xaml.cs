@@ -15,6 +15,7 @@ namespace Wpf
         public MainWindow()
         {
             InitializeComponent();
+            PasswordBoxML.Tag = "";
         }
         
         private void Button_Authorization(object sender, RoutedEventArgs e)
@@ -56,6 +57,10 @@ namespace Wpf
         private void PasswordTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             PasswordBoxML.Password = PasswordTextBox.Text;
+        }
+        private void PasswordBoxML_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBoxML.Tag = PasswordBoxML.Password;
         }
     }
 }
