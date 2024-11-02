@@ -7,6 +7,7 @@ using System;
 using MySql.Data.MySqlClient;
 using System.Linq;
 using System.Data.Common;
+using OfficeOpenXml;
 
 namespace Wpf
 {
@@ -215,6 +216,21 @@ namespace Wpf
             }
 
             return newTable;
+        }
+        public void CreateExcelFileWithTableFromDB(string title, string path)
+        {
+            OpenConnection();
+            var query = $"SELECT * FROM {title}";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage package = new ExcelPackage();
+
+            ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("NewSheet");
+            worksheet.Cells["A1"].LoadFromDataReader(reader, true);
+            package.SaveAs(new FileInfo(path));
+            CloseConnection();
         }
     }
 }

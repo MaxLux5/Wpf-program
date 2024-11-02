@@ -1,8 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
+using OfficeOpenXml;
 using System;
 using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace Wpf
 {
@@ -83,7 +88,19 @@ namespace Wpf
             bool answer = MessageBox.Show("Изменить эту строку?", "Изменение", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
             if (answer)
             {
-                dataBase.ChangeDataInTableRowFromDB(Title, TableGrid.SelectedItem, TableGrid.ItemsSource);
+                if(TableGrid.SelectedItem != null)
+                {
+                    try
+                    {
+                        dataBase.ChangeDataInTableRowFromDB(Title, TableGrid.SelectedItem, TableGrid.ItemsSource);
+                        MessageBox.Show("Данные изменены!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else MessageBox.Show("Строка для изменения не была выбрана!");
             }
         }
         private void Button_Search(object sender, RoutedEventArgs e)
@@ -96,6 +113,25 @@ namespace Wpf
             else
             {
                 DisplayTableFromDB();
+            }
+        }
+        private void Button_Print(object sender, RoutedEventArgs e)
+        {
+            bool answer = MessageBox.Show("Отправить на печать?", "Отправление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+            if (answer)
+            {
+                try
+                {
+                    string pathNewFile = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + $@"\{Title}.xlsx";
+                    dataBase.CreateExcelFileWithTableFromDB(Title, pathNewFile);
+
+                    System.Diagnostics.Process.Start(pathNewFile);
+                    MessageBox.Show("Таблица отправлена на печать!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Wpf"
+    "\\Wpf",
+    "\\Wpf\\Windows"
   ],
-  "SelectedNode": "\\Wpf\\Registration.xaml",
+  "SelectedNode": "\\Wpf\\DataBase.cs",
   "PreviewInSolutionExplorer": false
 }
